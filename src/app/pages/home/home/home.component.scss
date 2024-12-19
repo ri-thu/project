@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC+Guides&display=swap');
+.playwrite-au-vic-guides-regular {
+    font-family: "Playwrite AU VIC Guides", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC+Guides&family=Space+Grotesk:wght@300..700&display=swap'); 
+:host {
+
+    background-color: black;
+    margin: 0;
+    
+    background-size: cover;
+}
+.blockquote
+{
+    position: absolute;
+    top:200px;
+    left: 30px;;
+}
+.blockquote-footer{
+    position: absolute;
+    top: 250px;
+    left:180px;
+
+}
+h1{
+    align-items: center;
+    justify-content: center;
+   position: absolute;
+   left:500px;
+   top:50px;
+   font-family: "Playwrite AU VIC Guides", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+
+}
+
+  
+
+.body-para{
+    position: absolute;
+    top:280px;
+    left:50px;
+}
