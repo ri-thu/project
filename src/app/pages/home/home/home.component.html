@@ -1,5 +1,13 @@
 <h1 class="first">INDIAN TOURISM</h1>
-<app-corousal></app-corousal>
+<owl-carousel-o [options]="customOptions">
+
+  <ng-container *ngFor="let slide of cimage">
+    <ng-template carouselSlide [id]="slide.id.toString()">
+      <img style="width:50%;height:80%"  [src]="slide.image" [alt]="slide.alt">
+    </ng-template>
+  </ng-container>
+
+</owl-carousel-o>
 <div class="container">
     <figure class="text-start">
       <blockquote class="blockquote" style="color: rgb(32, 30, 30);">

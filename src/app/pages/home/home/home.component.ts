@@ -1,19 +1,44 @@
 import { Component } from '@angular/core';
 import { CorousalComponent } from "../../../ui/corousal/corousal/corousal.component";
-import { CarouselModule } from 'ngx-owl-carousel-o';
-@NgModule({
-  imports: [ CarouselModule ],
-  declarations: [ CarouselHolderComponent ]
-})
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { NgFor } from '@angular/common';
+
 export class SomeModule { }
 @Component({
   selector: 'app-home',
-  imports: [CorousalComponent],
+  imports: [CarouselModule,NgFor],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-cimages=[
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['>', '<'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 1
+      }
+    },
+    nav: true
+  }
+
+
+cimage=[
   {id: 1,
     alt:'image',
     image:'https://static.vecteezy.com/system/resources/thumbnails/033/611/193/small_2x/the-beautiful-city-of-udaipur-in-india-ai-generated-photo.jpg'
