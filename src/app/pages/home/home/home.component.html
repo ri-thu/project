@@ -1,22 +1,32 @@
-<h1 class="first">INDIAN TOURISM</h1>
-<owl-carousel-o [options]="customOptions">
+<div class="main-container">
+  
+  <div class="carousel-container">
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let slide of cimage">
+        <ng-template carouselSlide [id]="slide.id.toString()">
+          <img class="carousel-image" [src]="slide.image" [alt]="slide.alt">
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
 
-  <ng-container *ngFor="let slide of cimage">
-    <ng-template carouselSlide [id]="slide.id.toString()">
-      <img style="width:50%;height:80%"  [src]="slide.image" [alt]="slide.alt">
-    </ng-template>
-  </ng-container>
-
-</owl-carousel-o>
-<div class="container">
+  <div class="content-container">
+    <h1 class="first">INDIAN TOURISM</h1>
     <figure class="text-start">
-      <blockquote class="blockquote" style="color: rgb(32, 30, 30);">
+      <blockquote class="blockquote">
         <p><em>We have nothing to lose and a world to see.</em></p>
       </blockquote>
       <figcaption class="blockquote-footer">
         Somerwill<cite title="Source Title">Source Title</cite>
       </figcaption>
     </figure>
-    <p class="body-para">India is a country that attracts millions of tourists every year<br> and is considered one of the most popular tourist destinations<br> in the world.These visitors are attracted to its natural beauty<br> and cultural heritage.Tourism in India has been seen as a major<br> tool to bring about socio-economic development to the people<br> of the country.</p>
-    </div>
-   
+    <p class="body-para">
+      India is a country that attracts millions of tourists every year<br>
+      and is considered one of the most popular tourist destinations<br>
+      in the world. These visitors are attracted to its natural beauty<br>
+      and cultural heritage. Tourism in India has been seen as a major<br>
+      tool to bring about socio-economic development to the people<br>
+      of the country.
+    </p>
+  </div>
+</div>
